@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TodoForm from './Form';
 import Todo from './Todo';
+import Header from './Header';
 
 function Lists() {
   const [todos, setTodos] = useState([]);
@@ -42,6 +43,8 @@ function Lists() {
 
   return (
     <>
+    <Header />
+
       <h1>What's the Plan for Today?</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
